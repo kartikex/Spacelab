@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about exoplanets, their discovery, habitability, and more.">
+    <title>Exoplanet Explorer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+
+
+    <!-- Header Section -->
+    <style>
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .navbar {
+            animation: fadeInDown 0.7s ease-out;
+        }
+
+        .nav-list li {
+            opacity: 0;
+            animation: fadeInDown 0.7s ease-out forwards;
+        }
+
+        .nav-list li:nth-child(1) { animation-delay: 0.2s; }
+        .nav-list li:nth-child(2) { animation-delay: 0.3s; }
+        .nav-list li:nth-child(3) { animation-delay: 0.4s; }
+        .nav-list li:nth-child(4) { animation-delay: 0.5s; }
+        .nav-list li:nth-child(5) { animation-delay: 0.6s; }
+    </style>
+    <header class="main-header">
+        <nav class="navbar">
+            <div class="nav-logo">
+                <img src="/Image/logo-transparent-png.png">
+            </div>
+            <ul class="nav-list">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#timeline" class="nav-link">Timeline</a></li>
+                <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                <li><a href="#missions" class="nav-link">Missions</a></li>
+            </ul>
+        </nav>
+    
+        <!-- Welcome Section with Logo and Title -->
+        <div class="video-section">
+            <video autoplay muted id="section-video">
+              <source src="/Image/video_20241004_151320_edit.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <div class="web-start">
+                <h1>Exoplanets The New Frontier</h1>
+                <p>Exoplanets Exploration</p>
+            </div>
+        </div>
+
+        <style>
+            .nav-link {
+                position: relative;
+                transition: color 0.3s ease;
+            }
+            .nav-link::after {
+                content: '';
+                position: absolute;
+                width: 0;
+                height: 2px;
+                bottom: -5px;
+                left: 0;
+                background-color: #f39c12;
+                transition: width 0.3s ease;
+            }
+            .nav-link:hover::after {
+                width: 100%;
+            }
+            .nav-link:hover {
+                color: #f39c12;
+            }
+        </style>
+    </header>
+    
+
+    <!-- About Exoplanets Section -->
+    
+    <section id="about" class="section">
+        <h2 class="fade-in">About Exoplanets</h2>
+        <p class="fade-in">The exploration of exoplanets has evolved significantly over the years, marked by key milestones such as the first confirmed exoplanets discovered in 1992 around the pulsar PSR B1257+12 and the groundbreaking identification of 51 Pegasi b, a "hot Jupiter," in 1995. The launch of the Kepler Space Telescope in 2009 revolutionized the field by uncovering thousands of exoplanets, including the notable TRAPPIST-1 system in 2017, which features seven Earth-sized planets. The Transiting Exoplanet Survey Satellite (TESS), launched in 2018, continues this exploration by focusing on brighter stars. Meanwhile, the James Webb Space Telescope, launched in 2021, aims to analyze exoplanet atmospheres for potential biosignatures. Key detection methods include the transit method, radial velocity, direct imaging, and gravitational microlensing. As technology advances, research is increasingly focused on understanding planetary formation, composition, and the potential for life beyond Earth.
+        </p>
+        <div class="about-content">
+            <div class="slide-in-left">
+                <h3>What are Exoplanets?</h3>
+                <p>Exoplanets, or extrasolar planets, are planets that orbit stars outside our solar system. They vary widely in size, composition, and distance from their host stars. Some are gas giants similar to Jupiter, while others are rocky like Earth. Exoplanets can be found in a range of environments, from those orbiting within their star's habitable zone, where conditions might allow for liquid water, to those in extreme climates far from their stars.
+                </p>
+            </div>
+            <div class="slide-in-right">
+                <h3>Detection Methods</h3>
+                <p>1.Direct Imaging</p>
+                <p>2.Transit Method </p>
+                <p>3.Radial Velocity (Doppler Method)</p>
+                <p>4.Gravitational Microlensing</p>
+                <p>5.Astrometry</p>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .slide-in-left {
+            opacity: 0;
+            transform: translateX(-100px);
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+        }
+        .slide-in-right {
+            opacity: 0;
+            transform: translateX(100px);
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+        }
+        .slide-in-left.visible, .slide-in-right.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    </style>
+
+    <script>
+        function checkScroll() {
+            var elements = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right');
+            elements.forEach(function(element) {
+                var position = element.getBoundingClientRect().top;
+                var windowHeight = window.innerHeight;
+                if (position < windowHeight * 0.75) {
+                    element.classList.add('visible');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', checkScroll);
+        window.addEventListener('load', checkScroll);
+    </script>
+    
+    
+    <!-- Discovery Timeline Section -->
+    <section id="timeline" class="section fade-in">
+        <h2>Exoplanet Discovery Timeline</h2>
+        <div class="timeline">
+            <div class="timeline-item slide-in-left">
+                <h4>1995</h4>
+                <p>In 1995, the first exoplanet orbiting a Sun-like star, 51 Pegasi b, was discovered by Michel Mayor and Didier Queloz. This marked a groundbreaking moment in astronomy, as it was the first confirmed detection of a planet outside our solar system orbiting a star similar to our Sun. This discovery launched the modern era of exoplanet research and opened the door to finding many more planets beyond our solar system..</p>
+            </div>
+            <div class="timeline-item slide-in-right">
+                <h4>2009</h4>
+                <p>In 2009, NASA launched the Kepler Space Telescope, which revolutionized the search for exoplanets. Using the transit method, Kepler monitored over 150,000 stars, looking for tiny dips in brightness caused by planets passing in front of them. This mission led to the discovery of thousands of exoplanets, including Earth-sized planets in habitable zones, greatly expanding our understanding of planetary systems beyond our own. Kepler's findings continue to influence exoplanet research today..</p>
+            </div>
+            <div class="timeline-item slide-in-left">
+                <h4>2018</h4>
+                <p>In 2018, NASA launched the Transiting Exoplanet Survey Satellite (TESS), following the success of the Kepler mission. TESS is designed to search for exoplanets around the brightest stars near Earth using the transit method. Unlike Kepler, which focused on a small patch of the sky, TESS surveys nearly the entire sky, with the goal of finding Earth-like planets in nearby star systems. TESS has already discovered hundreds of exoplanets and continues to be a major tool in identifying potential planets for future study, particularly those that could support life.</p>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="section fade-in">
+        <h2>Exoplanet Gallery</h2>
+        <div class="container">
+            
+            <div class="gallery">
+                <div class="image-container fade-in">
+                  <img src="Image/trappist1d.png" alt="Image 1">
+                  <div class="overlay">
+                    <a href="trappist1d.html">
+                      <button>Know More <i class="fa-solid fa-angles-right"></i></button>
+                    </a>
+                </div>
+                </div>
+                <div class="image-container fade-in">
+                  <img src="Image/HR8799b.jpg" alt="Image 2">
+                  <div class="overlay">
+                    <a href="hr8799b.html">
+                        <button>Know More <i class="fa-solid fa-angles-right"></i></button>
+                      </a>
+                  </div>
+                </div>
+                <div class="image-container fade-in">
+                  <img src="Image/kepler-1649c.jpg" alt="Image 3">
+                  <div class="overlay">
+                    <a href="kepler1649c.html">
+                        <button>Know More <i class="fa-solid fa-angles-right"></i></button>
+                      </a>
+                  </div>
+                </div>
+                <div class="image-container fade-in">
+                  <img src="Image/kepler233b.jpg" alt="Image 4">
+                  <div class="overlay">
+                    <a href="kepler233b.html">
+                        <button>Know More <i class="fa-solid fa-angles-right"></i></button>
+                      </a>
+                  </div>
+                </div>
+                <div class="image-container fade-in">
+                  <img src="Image/kepler452b.jpg" alt="Image 5">
+                  <div class="overlay">
+                    <a href="kepler452b.html">
+                        <button>Know More <i class="fa-solid fa-angles-right"></i></button>
+                      </a>
+                  </div>
+                </div>
+                <div class="image-container fade-in">
+                  <img src="Image/proximab.jpeg" alt="Image 6">
+                  <div class="overlay">
+                    <a href="proximab.html">
+                        <button>Know More <i class="fa-solid fa-angles-right"></i></button>
+                      </a>
+                  </div>
+                </div>
+                <div class="image-container fade-in">
+                  <img src="Image/Red-dwarf.jpg" alt="Image 7">
+                  <div class="overlay">
+                    <a href="#">
+                        <button>Know More <i class="fa-solid fa-angles-right"></i></button>
+                      </a>
+                  </div>
+                </div>
+                <div class="image-container fade-in">
+                  <img src="Image/TOI-700d.jpg" alt="Image 8">
+                  <div class="overlay">
+                    <a href="toi-700d.html">
+                        <button>Know More <i class="fa-solid fa-angles-right"></i></button>
+                      </a>
+                  </div>
+                </div>
+                <div class="image-container fade-in">
+                  <img src="Image/GJ504b.jpg" alt="Image 9">
+                  <div class="overlay">
+                    <a href="gj504b.html">
+                        <button>Know More <i class="fa-solid fa-angles-right"></i></button>
+                      </a>
+                  </div>
+                </div>
+              </div>
+              
+        </div>
+    </section>
+
+    <section id="missions" class="section fade-in">
+        <h2>Exoplanet Missions</h2>
+        <div class="mission-container">
+            <div class="mission-item slide-in-left">
+                <div class="mission-info">
+                    <h3>Kepler Mission</h3>
+                    <p>Launched in 2009, the Kepler space telescope was NASA's first mission capable of finding Earth-size planets around other stars. The spacecraft detected exoplanets using the transit method, measuring the tiny dip in a star's brightness that occurs when a planet crosses in front of it.</p>
+                    <a href="https://www.nasa.gov/mission_pages/kepler/main/index.html" target="_blank" class="learn-more-btn">Learn More</a>
+                </div>
+                <div class="mission-video">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/3yij1rJOefM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+            <hr class="mission-separator">
+            <div class="mission-item slide-in-right">
+                <div class="mission-info">
+                    <h3>TESS (Transiting Exoplanet Survey Satellite)</h3>
+                    <p>Launched in 2018, TESS is designed to search for exoplanets using the transit method in an area 400 times larger than that covered by the Kepler mission. It focuses on the brightest stars near Earth, making follow-up studies easier.</p>
+                    <a href="https://www.nasa.gov/tess-transiting-exoplanet-survey-satellite" target="_blank" class="learn-more-btn">Learn More</a>
+                </div>
+                <div class="mission-video">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/tjkqhQ3NI3o?si=Hcl5DUIiaCLD8frr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+            <hr class="mission-separator">
+            <div class="mission-item slide-in-left">
+                <div class="mission-info">
+                    <h3>James Webb Space Telescope</h3>
+                    <p>Launched in 2021, the James Webb Space Telescope is not primarily an exoplanet mission, but its powerful infrared capabilities make it an excellent tool for studying exoplanet atmospheres and compositions.</p>
+                    <a href="https://www.jwst.nasa.gov/" target="_blank" class="learn-more-btn">Learn More</a>
+                </div>
+                <div class="mission-video">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/dC1-qgR7YO0?si=2rAPNPpQtpUwsNcO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+            <style>
+                .mission-item {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-bottom: 30px;
+                    padding: 20px;
+                    background-color: rgba(255, 255, 255, 0.05);
+                    border-radius: 10px;
+                    transition: all 0.3s ease;
+                }
+                .mission-item:hover {
+                    transform: translateY(-5px);
+                    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+                }
+                .mission-info {
+                    flex: 1;
+                    padding-right: 20px;
+                }
+                .mission-video {
+                    flex: 1;
+                }
+                .mission-separator {
+                    border: 0;
+                    height: 1px;
+                    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+                    margin: 30px 0;
+                }
+                @media (max-width: 768px) {
+                    .mission-item {
+                        flex-direction: column;
+                    }
+                    .mission-info, .mission-video {
+                        width: 100%;
+                        padding-right: 0;
+                    }
+                    .mission-video {
+                        margin-top: 20px;
+                    }
+                }
+            </style>
+        </div>
+    </section>
+
+    <style>
+        .learn-more-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #2980b9;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .learn-more-btn:hover {
+            background-color: #3498db;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .learn-more-btn:active {
+            transform: translateY(-1px);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section"> 
+      <a href="contactus.html">
+       <button class="btn">Contact Us <i class="fa-regular fa-envelope"></i></button>
+      </a>
+
+    <!-- Footer Section -->
+    <footer class="main-footer">
+        <p>&copy; 2024 Planetlab. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
