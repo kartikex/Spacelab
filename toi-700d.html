@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOI 700 d</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #0a0e21, #1c1f36);
+            color: #ffffff;
+            line-height: 1.6;
+            background-image: url(/Image/pattern.png);
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            text-align: center;
+            background: transparent;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        h2 {
+            font-size: 2em;
+            margin-bottom: 15px;
+            color: #ff6200ea;
+        }
+        p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+        .back-button, .previous-button {
+            background-color: #ff6200ea;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.1em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin: 10px;
+        }
+        .back-button:hover, .previous-button:hover {
+            background-color: #ff4500;
+        }
+        .image-container {
+            margin-bottom: 20px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Exoplanet: TOI 700 d</h1>
+        
+        <!-- Space for the image -->
+        <div class="image-container">
+            <img src="Image/TOI-700d.jpg" alt="TOI 700 d illustration">
+        </div>
+        
+        <h2>Key Information</h2>
+        <p><strong>Star:</strong> TOI 700 (a red dwarf star)</p>
+        <p><strong>Distance:</strong> 100 light-years from Earth</p>
+        <p><strong>Type:</strong> Rocky planet</p>
+        <p><strong>Orbit:</strong> 37.4 Earth days</p>
+        <p><strong>Key Info:</strong> TOI 700 d lies within the habitable zone of its star, with potential for liquid water. It is one of the most Earth-like exoplanets discovered by NASA’s TESS mission.</p>
+        <p><strong>Fact:</strong> The discovery of TOI 700 d was confirmed in 2020, making it a relatively new addition to known exoplanets with potential habitability.</p>
+        
+        <!-- Back buttons -->
+        <button class="back-button" onclick="window.history.back();">Back to Exoplanets</button>
+        <button class="previous-button" onclick="window.history.go(-1);">Back to Previous Page</button>
+    </div>
+</body>
+</html>

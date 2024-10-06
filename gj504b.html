@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GJ 504b</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #0a0e21, #1c1f36);
+            color: #ffffff;
+            line-height: 1.6;
+            background-image: url(/Image/pattern.png);
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            text-align: center;
+            background: transparent;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        h2 {
+            font-size: 2em;
+            margin-bottom: 15px;
+            color: #ff6200ea;
+        }
+        p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+        .back-button, .previous-button {
+            background-color: #ff6200ea;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.1em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin: 10px;
+        }
+        .back-button:hover, .previous-button:hover {
+            background-color: #ff4500;
+        }
+        .image-container {
+            margin-bottom: 20px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Exoplanet: GJ 504b</h1>
+        
+        <!-- Space for the image -->
+        <div class="image-container">
+            <img src="Image/GJ504b.jpg" alt="GJ 504b illustration">
+        </div>
+        
+        <h2>Key Information</h2>
+        <p><strong>Star:</strong> GJ 504 (a Sun-like star)</p>
+        <p><strong>Distance:</strong> 57 light-years from Earth</p>
+        <p><strong>Type:</strong> Gas giant</p>
+        <p><strong>Orbit:</strong> 160 Earth years</p>
+        <p><strong>Key Info:</strong> GJ 504b is a gas giant, notable for its striking magenta color, caused by the planet’s heat. It is relatively young and massive, and its orbit is significantly farther from its star compared to Jupiter’s orbit around the Sun.</p>
+        <p><strong>Fact:</strong> This planet challenges our understanding of how gas giants form, as it’s much farther from its star than typical gas giants like Jupiter or Saturn.</p>
+        
+        <!-- Back buttons -->
+        <button class="back-button" onclick="window.history.back();">Back to Exoplanets</button>
+        <button class="previous-button" onclick="window.history.go(-1);">Back to Previous Page</button>
+    </div>
+</body>
+</html>
